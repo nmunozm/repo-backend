@@ -14,5 +14,5 @@ module.exports = app;
 
 // Solo encendemos el servidor si este archivo se ejecuta directamente
 if (require.main === module) {
-  app.listen(3000, () => console.log('Servidor en puerto 3000'));
+  app.listen(8080, () => console.log('Servidor en puerto 8080'));
 }
