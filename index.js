@@ -14,5 +14,9 @@ module.exports = app;
 
 // Solo encendemos el servidor si este archivo se ejecuta directamente
 if (require.main === module) {
-  app.listen(8080, () => console.log('Servidor en puerto 8080'));
+  const PORT = process.env.PORT || 8080; // Usa la variable de Google o 8080
+  
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Servidor corriendo en el puerto ${PORT}`);
+  });
 }
